@@ -1,25 +1,19 @@
-export default function BlogPage() {
+export default function blog() {
+  const posts =[
+    {id: 1, title: "Blog Post 1", content: "This is the content of blog post 1"},
+    {id: 2, title: "Blog Post 2", content: "This is the content of blog post 2"},
+    {id: 3, title: "Blog Post 3", content: "This is the content of blog post 3"},
+  ]
+
   return (
-    <main className="min-h-screen bg-slate-50 p-8 text-slate-900">
-      <div className="mx-auto max-w-3xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
-          Blog
-        </p>
-        <h1 className="mt-3 text-4xl font-bold">Simple Blog</h1>
-        <p className="mt-4 text-lg text-slate-600">
-          A tiny blog homepage for Next.js.
-        </p>
-        <div className="mt-8 space-y-4">
-          {["Clean layout", "Fast reading", "Easy to expand"].map((item) => (
-            <div
-              key={item}
-              className="rounded-2xl border bg-white px-5 py-4 shadow-sm"
-            >
-              {item}
-            </div>
+    <main className="mt-10">
+      <div>
+        <ul>
+          {posts.map((post) => (
+            <li key={post.id} className="mb-4">{post.title}</li>
           ))}
-        </div>
+        </ul>
       </div>
     </main>
-  );
+  )
 }
