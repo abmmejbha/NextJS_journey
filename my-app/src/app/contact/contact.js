@@ -1,10 +1,21 @@
+"use client"
+
 export default function Contact() {
-  return (
-    <div>
-      <button className="btn btn-primary">
-        Contact Us
-        <alert className="alert alert-info">This is the contact page</alert>
-      </button>
-    </div>
-  );
+    const handleClick = () => {
+        alert("This is the contact page")
+    }
+
+    return (
+        <main>
+            <div className="flex flex-col justify-center items-center min-h-screen">
+                <h1 className="text-2xl mb-4">Contact US</h1>
+                <button 
+                    onClick={handleClick}
+                    className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
+                        Click Me
+                    </button>
+            </div>
+        </main>
+    )
+
 }

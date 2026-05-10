@@ -1,10 +1,12 @@
 import react from 'react';
 
-export default function BlogPost({params}) {
-
+export default async function BlogPost({params}) {
+    const {id} = await params
     return(
-        <div className="mt-10"> 
-            The blog post id is {params.id} 
-        </div>
+        <main>
+            <div className="p-10 bg-blue-100"> 
+                 The blog post id is {id} 
+            </div>
+        </main>
     )
 }

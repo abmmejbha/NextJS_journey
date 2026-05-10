@@ -8,6 +8,8 @@ export default function RootLayout({ children}) {
           MY website navbar <br/>
           <Link href="/blog">Blog</Link> <span className="mx-2">|</span>
           <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+          <hr />
         </nav>
         {children}
       </body>
