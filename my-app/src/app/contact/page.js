@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 
 export default function Contact() {
     const handleClick = () => {
@@ -14,7 +15,10 @@ export default function Contact() {
                     className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300">
                         Click Me
                     </button>
+            <Link href="/" className="text-blue-500 hover:underline mt-4 block">Go back to Home</Link>
             </div>
+
+
         </main>
     )
 
