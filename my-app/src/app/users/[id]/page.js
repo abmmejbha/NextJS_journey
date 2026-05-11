@@ -1,3 +1,6 @@
+
+
+
 export default async function UserDetails({params}) {
     const {id} = await params
 
@@ -18,6 +21,8 @@ export default async function UserDetails({params}) {
                 <p className="mt-4"><strong>Company:</strong>{users.company.name}</p>
             </div>
             
+            
+
         </div>
     )
 }
