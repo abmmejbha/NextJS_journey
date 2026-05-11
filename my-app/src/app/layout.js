@@ -6,7 +6,7 @@ export default function RootLayout({ children}) {
   return (
     <html lang="en">
       <body>
-        <nav className="bg-gray-500 text-cyan-400 p-2">
+        <nav className="bg-gray-800 text-white p-4 flex gap-4">
           
           <Link href="/">Home</Link> <span className="mx-2">|</span>
           <Link href="/blog">Blog</Link> <span className="mx-2">|</span>
