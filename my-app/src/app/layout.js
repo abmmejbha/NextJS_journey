@@ -1,21 +1,14 @@
 import "./globals.css";
-import Link from 'next/link'
+import Navbar from "../components/Navbar";
 
-
-export default function RootLayout({ children}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav className="bg-gray-800 text-white p-4 flex gap-4">
-          
-          <Link href="/">Home</Link> <span className="mx-2">|</span>
-          <Link href="/blog">Blog</Link> <span className="mx-2">|</span>
-          <Link href="/about">About</Link> <span className="mx-2"> | </span>
-          <Link href="/contact">Contact</Link> <span className="mx-2"> | </span>
-          <Link href="/users">Users</Link> <span className="mx-2">  </span>
-        </nav>
-        {children}
+        <Navbar />
+
+        <main>{children}</main>
       </body>
     </html>
-  )
+  );
 }
