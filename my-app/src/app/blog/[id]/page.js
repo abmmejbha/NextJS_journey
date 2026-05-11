@@ -19,8 +19,8 @@ export default async function BlogPost({params}) {
     
     return(
         <main>
-            <div className="p-10 bg-blue-100"> 
-                    <h1 className="text-2xl font-bold mb-4">{post.title}</h1>
+            <div className="min-h-screen bg-gray-200 rounded shadow"> 
+                    <h1 className="text-2xl shadow-lg items-center font-bold mb-4 text-cyan-500">{post.title}</h1>
                     <p className="text-lg text-gray-700">{post.content}</p>
             </div>
         </main>
