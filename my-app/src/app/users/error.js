@@ -12,6 +12,10 @@ export default function Error({error, reset}) {
             <h2 className='text-2xl font-bold text-red-600'>Oops something Wrong</h2>
             <p className='text-gray-600 mb-4'>We were unable to fetch data</p>
         
+        <p className='text-gray-700 bg-red-50 p-4 rounded mb-4 inline-block'>
+            {error.message || "something is wrong, Please try again!"}
+        </p>
+
             <button 
                 onClick={() => reset()}
                 className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700'
