@@ -1,15 +1,19 @@
-import Link from 'next/link'
+"use client"
 
+import Link from 'next/link'
+import {usePathname} from 'next/navigation'
 
 export default function Navbar() {
+  const pathname = usePathname()
+
   return (
-        <nav className="bg-gray-800 text-white p-4 flex gap-4">
+        <nav className="shadow-lg bg-gray-500 text-white p-4 flex gap-4">
           
-          <Link href="/">Home</Link> <span className="mx-2">|</span>
-          <Link href="/blog">Blog</Link> <span className="mx-2">|</span>
-          <Link href="/about">About</Link> <span className="mx-2"> | </span>
-          <Link href="/contact">Contact</Link> <span className="mx-2"> | </span>
-          <Link href="/users">Users</Link> <span className="mx-2">  </span>
+          <Link className={pathname === "/" ? "text-blue-400 font-bold" : "hover:text-blue-300"} href="/">Home</Link> 
+          <Link className={pathname === "/users" ? "text-blue-400 font-bold" : "hover:text-blue-300"} href="/users">Users</Link>
+          <Link className={pathname === "/blog" ? "text-blue-400 font-bold" : "hover:text-blue-300"} href="/blog">Blog</Link>
+          <Link className={pathname === "/about" ? "text-blue-400 font-bold" : "hover:text-blue-300"} href="/about">About</Link>
+          <Link className={pathname === "/contact" ? "text-blue-400 font-bold" : "hover:text-blue-300"} href="/contact">Contact</Link> 
         </nav>
   )
 }
