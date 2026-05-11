@@ -1,4 +1,4 @@
-
+import Link from 'next/link'
 
 
 export default async function UserDetails({params}) {
@@ -21,7 +21,10 @@ export default async function UserDetails({params}) {
                 <p className="mt-4"><strong>Company:</strong>{users.company.name}</p>
             </div>
             
-            
+            <Link 
+                href="/users"
+                className='bg-blue-400 px-4 py-2 rounded-md hover:cursor hover:bg-blue-500 shadow-md'
+                >Go back</Link>
 
         </div>
     )
