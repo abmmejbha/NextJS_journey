@@ -25,7 +25,8 @@ export default function UserListClient({ initialUsers }) {
           onChange={handleSearch}
           placeholder="Search users by name"
           value={searchTerm}
-          className="w-full p-4 pl-12 border border-gray-200 rounded-xl shadow-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-500 text-black transition-all"
+          className="w-full p-4 pl-12 border border-gray-200 rounded-xl shadow-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus focus:ring-blue-500 text-black transition-all"
+          
         />
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
